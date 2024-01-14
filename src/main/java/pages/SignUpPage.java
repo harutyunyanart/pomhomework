@@ -24,7 +24,10 @@ public class SignUpPage extends BasePage {
     By city = By.cssSelector("input[data-qa=\"city\"]");
     By zipCode = By.cssSelector("input[data-qa=\"zipcode\"]");
     By mobileNumber = By.cssSelector("input[data-qa=\"mobile_number\"]");
-    By createAccountButton = By.cssSelector("button[data-qa=\"create-account\"]");
+    By createAccountButton = By.cssSelector("button[type=\"submit\"]");
+    By continueButton = By.cssSelector("a[data-qa=\"continue-button\"]");
+    By deleteAccountButton = By.cssSelector("a[href=\"/delete_account\"]");
+
 
 
     public void sendLoginPassword(String name) {
@@ -114,6 +117,14 @@ public class SignUpPage extends BasePage {
 
     public void clickCreateAccount() {
         clickOnElement(createAccountButton);
+    }
+
+    public void clickContinueButton(){
+        clickOnElement(continueButton);
+    }
+
+    public void clickDeleteAccountButton(){
+        clickOnElement(deleteAccountButton);
     }
     public void setNewsLetter(boolean check){
         setCheckboxState(newsletter,check);
