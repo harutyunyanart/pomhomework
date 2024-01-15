@@ -1,0 +1,13 @@
+1. Navigate to main page and validate that logo is visible
+2. Navigate to the main page and validate that URL is https://automationexercise.com
+3. Navigate to the main page and validate that "Signup / Login" buton is visible
+4. Navigate to the "Signup / Login" page and validate that URL is https://automationexercise.com/login
+5. Navigate to the "Signup / Login" page and validate that "Login to your account" section displayed
+6. Navigate to the "Signup / Login" page and validate that "New User Signup!" section displayed
+7. Navigate to the "Signup / Login" page and validate that "Signup" button is visible
+8. Navigate to the "Signup / Login" page and validate that "Signup" button is visible
+9. Fill Name And Email and click on SignUp button, validate that "Password", "Date of Birth", "First name", "Last name" and "Create Account" are visible
+10. Fill all mandatory fields and click on "Create Account" button validate that "ACCOUNT CREATED!" title displayed and the collor HEX is "008000"
+11. Fill all mandatory fields and click on "Create Account" button validate that "Congratulations! Your new account has been successfully created!
+You can now take advantage of member privileges to enhance your online shopping experience with us." description is visible
+12. Validate that "Continue" button is visible

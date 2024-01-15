@@ -37,13 +37,5 @@ public class RegistrationTest extends BaseTest {
         signUpPage.clickCreateAccount();
         signUpPage.clickContinueButton();
         signUpPage.clickDeleteAccountButton();
-
-
-
-
-
-
-
-
     }
 }
