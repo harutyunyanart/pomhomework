@@ -9,7 +9,7 @@ public class SignUpPage extends BasePage {
     By nameInput = By.cssSelector("input[id=\"name\"]");
     By email = By.cssSelector("input[data-qa=\"email\"]");
     By password = By.cssSelector("input[data-qa=\"password\"]");
-    By dayOfBirth = By.id("days");
+    By dayOfBirth = By.cssSelector("select[data-qa=days]");
     By dayOfMonth = By.id("months");
     By dayOfYear = By.id("years");
     By newsletter = By.cssSelector("label[for=\"newsletter\"]");

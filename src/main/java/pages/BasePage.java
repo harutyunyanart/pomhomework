@@ -11,20 +11,24 @@ import java.time.Duration;
 
 public abstract class BasePage {
     protected WebDriver driver;
-    private Duration timeout = Duration.ofSeconds(30);
+    public Duration timeout = Duration.ofSeconds(30);
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
+
+
+
 
     public WebElement getElement(By locator) {
         WebDriverWait wait = new WebDriverWait(this.driver, timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void writeInText(By locator, String text) {
-        getElement(locator).sendKeys(text);
-    }
+
+
+
+
 
     public abstract void openURL();
 

@@ -3,4 +3,4 @@ Note: You can implement your code based on https://github.com/aghagor/selenium
 1. push your codes, and open Pull request on main brnach, make  me as a reviewer, I will merge after review
 2. for this step just implement and automate test cases from src/codeImprovment
 3. Think about using BaseTest
-4. Implement test classes based on your web app structure (HomePageTests, SignUpOrLoginPageTests, RegostrationPageTests, CongratulationPageTests)
+4. Implement test classes based on your web app structure (HomePageTests, SignUpOrLoginPageTests, RegistrationPageTests, CongratulationPageTests)
