@@ -14,7 +14,6 @@ public class ProductsPage extends  BasePage {
 
     @Override
     public void openURL() {
-
     }
 
     public WebElement getSearchProductInput(){

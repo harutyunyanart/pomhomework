@@ -6,8 +6,6 @@ import org.testng.annotations.AfterTest;
 
 public class BaseTest {
     WebDriver driver = new ChromeDriver();
-
-    //@AfterTest
     protected void quitBrowser(){
         driver.quit();
     }

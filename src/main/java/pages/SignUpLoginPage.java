@@ -28,21 +28,8 @@ public class SignUpLoginPage extends BasePage {
         sendKeysOnElement(signUpEmailAddressInput, name);
     }
 
-    public void sendLoginEmailAddress(String name) {
-        sendKeysOnElement(loginEmailAddress, name);
-    }
-
-    public void sendLoginPassword(String name) {
-        sendKeysOnElement(loginPassword, name);
-    }
-
     public SignUpPage clickSignUpButton(){
         super.clickOnElement(signUpButton);
         return new SignUpPage(driver);
     }
-    public void clickLoginButton(){
-        super.clickOnElement(loginButton);
-    }
-
-
 }

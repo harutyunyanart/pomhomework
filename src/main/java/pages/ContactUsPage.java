@@ -17,34 +17,9 @@ public class ContactUsPage extends BasePage {
 
     @Override
     public void openURL() {
-
     }
-
-    public WebElement getNameInput(){
-        return super.driver.findElement(nameInput);
-    }
-
-    public WebElement getEmailInput(){
-        return driver.findElement(emailInput);
-    }
-
-    public WebElement getSubjectInput(){
-        return driver.findElement(subjectInput);
-    }
-    public WebElement getYourMessageHereInput(){
-        return driver.findElement(yourMessageHereInput);
-    }
-
-    public WebElement getSubmitButton(){
+    public WebElement getSubmitButton() {
         return driver.findElement(submitButton);
-    }
-
-    public void setSubmitButton(){
-        getSubmitButton().sendKeys();
-    }
-
-    public void clickSubmitButton(){
-        getSubmitButton().click();
     }
 
 }

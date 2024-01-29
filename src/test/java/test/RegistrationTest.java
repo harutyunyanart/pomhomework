@@ -16,7 +16,7 @@ public class RegistrationTest extends BaseTest {
         SignUpLoginPage signUpLoginPage = new SignUpLoginPage(driver);
         signUpLoginPage.clickSignUpButton();
         signUpLoginPage.sendSignUpName("Artur");
-        signUpLoginPage.sendSignUpEmailAddress("ArturHAA@mail.ru");
+        signUpLoginPage.sendSignUpEmailAddress("ArturHAAfr@mail.ru");
         SignUpPage signUpPage = signUpLoginPage.clickSignUpButton();
         signUpPage.sendLoginPassword("password");
         signUpPage.clickOnDayOfBirth();
