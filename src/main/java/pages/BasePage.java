@@ -18,42 +18,30 @@ public abstract class BasePage {
     }
 
 
-
-
     public WebElement getElement(By locator) {
         WebDriverWait wait = new WebDriverWait(this.driver, timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
-
-
-
-
-
     public abstract void openURL();
-
     public void sendKeysOnElement(By locator, String name) {
         this.getElement(locator).sendKeys(name);
     }
-
     protected void clickOnElement(By locator) {
         getElement(locator).click();
 
     }
-
     public void selectOptionByText(By locator, String text) {
         Select drop = new Select(getElement(locator));
         drop.selectByVisibleText(text);
     }
-
     public boolean isCheckBoxSelected(By locator) {
         return getElement(locator).isSelected();
     }
 
-    public void setCheckboxState(By locator,boolean check){
-       if(isCheckBoxSelected(locator)!=check){
-           clickOnElement(locator);
-       }
+    public void setCheckboxState(By locator, boolean check) {
+        if (isCheckBoxSelected(locator) != check) {
+            clickOnElement(locator);
+        }
     }
 
 }

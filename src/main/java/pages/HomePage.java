@@ -10,18 +10,10 @@ import java.time.Duration;
 
 public class HomePage extends BasePage {
     By signUpButton = By.cssSelector("a[href=\"/login\"]");
-    By productsButton = By.cssSelector("a[href=\"/products\"]");
-    By contactUs = By.cssSelector("a[href=\"/contact_us\"]");
-
-
-
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
-
-
-    //    By logoPage = By.cssSelector("img[src=\"/static/images/home/logo.png\"]");
     public static final String logo = "img[src=\"/static/images/home/logo.png\"]";
     public static final String signUpLoginButton = "a[href=\"/login\"]";
     public static final String loginToYourAccount = "div[class=\"login-form\"]";
@@ -36,87 +28,55 @@ public class HomePage extends BasePage {
         new WebDriverWait(this.driver, timeout).pollingEvery(Duration.ofMillis(200))
                 .until(ExpectedConditions.visibilityOf(element));
     }
-
-
     protected WebElement findElementByCssSelector(String selector) {
         return this.driver.findElement(By.cssSelector(selector));
     }
-
     public WebElement getLogoVisible() {
         WebElement logoVisible = findElementByCssSelector(logo);
         waitTillElementIsVisible(logoVisible);
         return logoVisible;
     }
-
     public WebElement getSignUpLoginButtonVisible() {
         WebElement signUpLoginVisible = findElementByCssSelector(signUpLoginButton);
         waitTillElementIsVisible(signUpLoginVisible);
         return signUpLoginVisible;
     }
-
     public WebElement validationLoginTOYourAccountSection() {
         WebElement validationLoginSection = findElementByCssSelector(loginToYourAccount);
         waitTillElementIsVisible(validationLoginSection);
         return validationLoginSection;
     }
-
     public WebElement validationNewUserSignUp() {
         WebElement validationNewUser = findElementByCssSelector(newUserSignUp);
         waitTillElementIsVisible(validationNewUser);
         return validationNewUser;
     }
-
     public WebElement validationSignUpButton() {
         WebElement signUpButton = findElementByCssSelector(signUpButtonValidate);
         waitTillElementIsVisible(signUpButton);
         return signUpButton;
     }
-
     public WebElement validationLoginButton() {
         WebElement loginButton = findElementByCssSelector(loginButtonV);
         waitTillElementIsVisible(loginButton);
         return loginButton;
     }
-
     public WebElement validationAccountCreate() {
         WebElement account = findElementByCssSelector(ACCOUNTCREATED);
         waitTillElementIsVisible(account);
         return account;
     }
-
     public WebElement validateCongratulation(){
         WebElement congratulation = findElementByCssSelector(CONGRATULATIONS);
         waitTillElementIsVisible(congratulation);
         return congratulation;
     }
-
-    public WebElement validationContinueButton(){
-        WebElement continueButton = findElementByCssSelector(CONTINUE_BUTTON);
-        waitTillElementIsVisible(continueButton);
-        return continueButton;
-    }
-
-
-//    public WebElement validationAccountCreate(){
-//
-//    }
-
-
-//    public WebElement getUrlHomePage(){
-//        WebElement url = findElementByCssSelector()
-//
-//    }
-
-
     @Override
     public void openURL() {
         driver.get("https://automationexercise.com/");
     }
 
-
     public void clickSignUpButton() {
         driver.findElement(signUpButton).click();
     }
-
-
 }

@@ -1,16 +1,10 @@
 package test;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.BasePage;
 import pages.HomePage;
 import pages.SignUpLoginPage;
 import pages.SignUpPage;
@@ -18,8 +12,6 @@ import pages.SignUpPage;
 import java.time.Duration;
 
 public class HomePageTests extends BaseTest {
-    private HomePage homePage;
-
 
     //Implement all functionality, which need to execute before test
     @BeforeTest
@@ -76,8 +68,6 @@ public class HomePageTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(originalUrl, expectedUrl);
     }
-
-
     @Test
     public void validationLoginTOYourAccountSection() {
         HomePage homePage = new HomePage(super.driver);
@@ -105,7 +95,6 @@ public class HomePageTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(homePage.validationSignUpButton().isDisplayed());
     }
-
     @Test
     public void validationLoginButton() {
         HomePage homePage = new HomePage(super.driver);
@@ -114,7 +103,6 @@ public class HomePageTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(homePage.validationLoginButton().isDisplayed());
     }
-
     @Test
     public void validationAccountCreate() {
         HomePage homePage = new HomePage(super.driver);
@@ -123,7 +111,8 @@ public class HomePageTests extends BaseTest {
         SignUpLoginPage signUpLoginPage = new SignUpLoginPage(driver);
         signUpLoginPage.clickSignUpButton();
         signUpLoginPage.sendSignUpName("Artur");
-        signUpLoginPage.sendSignUpEmailAddress("ArtuAbyssghtdhkfhjrvhA@mail.ru");
+        signUpLoginPage.sendSignUpEmailAddress("ArtuAbyssgdrsdfsc" +
+                "fhhtdhkfhjrvhA@mail.ru");
         SignUpPage signUpPage = signUpLoginPage.clickSignUpButton();
         signUpPage.sendLoginPassword("password");
         signUpPage.clickOnDayOfBirth();
@@ -147,7 +136,6 @@ public class HomePageTests extends BaseTest {
 
 
     }
-
     @Test
     public void validateCongratulation() {
         HomePage homePage = new HomePage(super.driver);
@@ -156,7 +144,7 @@ public class HomePageTests extends BaseTest {
         SignUpLoginPage signUpLoginPage = new SignUpLoginPage(driver);
         signUpLoginPage.clickSignUpButton();
         signUpLoginPage.sendSignUpName("Artur");
-        signUpLoginPage.sendSignUpEmailAddress("hrdfdfdjdssdkdddjf@mail.ru");
+        signUpLoginPage.sendSignUpEmailAddress("hrdfdfdjdssdsdkdddjf@mail.ru");
         SignUpPage signUpPage = signUpLoginPage.clickSignUpButton();
         signUpPage.sendLoginPassword("password");
         signUpPage.clickOnDayOfBirth();
@@ -180,8 +168,6 @@ public class HomePageTests extends BaseTest {
                 "\n" +
                 "You can now take advantage of member privileges to enhance your online shopping experience with us.");
     }
-
-
     @Test
     public void validationContinue() {
         HomePage homePage = new HomePage(super.driver);
@@ -190,7 +176,7 @@ public class HomePageTests extends BaseTest {
         SignUpLoginPage signUpLoginPage = new SignUpLoginPage(driver);
         signUpLoginPage.clickSignUpButton();
         signUpLoginPage.sendSignUpName("Artur");
-        signUpLoginPage.sendSignUpEmailAddress("hrdfdrrrfdjdsffsdkdddjf@mail.ru");
+        signUpLoginPage.sendSignUpEmailAddress("hrdfdrrrssdkdddjf@mail.ru");
         SignUpPage signUpPage = signUpLoginPage.clickSignUpButton();
         signUpPage.sendLoginPassword("password");
         signUpPage.clickOnDayOfBirth();
